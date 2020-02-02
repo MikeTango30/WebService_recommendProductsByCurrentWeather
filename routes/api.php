@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\CheckCityCode;
 use Illuminate\Http\Request;
 
 /*
@@ -13,6 +14,5 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+Route::get('/products/recommended/{city}', 'RecommendedProductsController@show')->middleware(CheckCityCode::class);
+
