@@ -4,20 +4,39 @@ namespace App\Http\Controllers;
 
 use App\Product;
 use App\WeatherApi\ApiWeatherContract;
-use Illuminate\Http\Request;
 
 class RecommendedProductsController extends Controller
 {
-
-    public function show($city, ApiWeatherContract $apiWeather)
+    /**
+     * @param string $city
+     * @param ApiWeatherContract $apiWeather
+     * @return array
+     */
+    public function show(string $city, ApiWeatherContract $apiWeather) :array
     {
         $currentWeather = $apiWeather->getCurrentWeather($city);
-        $recommendedProducts = Product::findByWeather($currentWeather);
+        $recommendedProducts = $this->aggregateRecommendedProducts($city, $currentWeather);
 
         if (!$recommendedProducts) {
             abort(404);
         }
 
-        return "$recommendedProducts";
+        return $recommendedProducts;
+    }
+
+    /**
+     * @param $city
+     * @param $currentWeather
+     * @return array
+     */
+    public function aggregateRecommendedProducts(string $city, string $currentWeather): array
+    {
+        $recommendedProducts = [
+            "city" => $city,
+            "current_weather" => $currentWeather,
+            "recommended_products" => Product::findByWeather($currentWeather)
+        ];
+
+        return $recommendedProducts;
     }
 }
