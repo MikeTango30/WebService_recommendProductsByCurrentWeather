@@ -2,13 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\WeatherApi\ApiWeather;
 use Illuminate\Http\Request;
 
 class RecommendedProductsController extends Controller
 {
 
-    public function show($city)
+    public function show($city, ApiWeather $apiWeather)
     {
-        return "Success";
+        $currentWeather = $apiWeather->getCurrentWeather($city);
+        if (!$currentWeather) {
+            abort(404);
+        }
+
+        return "$currentWeather";
     }
 }
