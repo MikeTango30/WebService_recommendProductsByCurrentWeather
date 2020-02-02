@@ -50,7 +50,7 @@ return [
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE', 'heroku_eff906c92cdf53c'),
             'username' => env('DB_USERNAME', 'bd706c640514d5'),
-            'password' => env('DB_PASSWORD', '	c11f2c56 '),
+            'password' => env('DB_PASSWORD', '36ec81379dbfb92'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',
