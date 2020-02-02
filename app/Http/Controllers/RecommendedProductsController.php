@@ -32,6 +32,7 @@ class RecommendedProductsController extends Controller
     public function aggregateRecommendedProducts(string $city, string $currentWeather): array
     {
         $recommendedProducts = [
+            "data source" =>'LHMT api.meteo.lt',
             "city" => $city,
             "current_weather" => $currentWeather,
             "recommended_products" => Product::findByWeather($currentWeather)
