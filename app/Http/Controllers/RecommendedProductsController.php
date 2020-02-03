@@ -14,6 +14,7 @@ class RecommendedProductsController extends Controller
      */
     public function show(string $city, ApiWeatherContract $apiWeather) :array
     {
+        $city = strtolower($city);
         $currentWeather = $apiWeather->getCurrentWeather($city);
         $recommendedProducts = $this->aggregateRecommendedProducts($city, $currentWeather);
 
