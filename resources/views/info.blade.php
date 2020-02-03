@@ -14,7 +14,7 @@
 <main>
     <div class="container-fluid">
         <div class="container">
-            <div class="row justify-content-center mt-6">
+            <div class="row justify-content-center usage">
                 <div class="card">
                     <div class="card-header">Api usage</div>
                     <div class="card-body">

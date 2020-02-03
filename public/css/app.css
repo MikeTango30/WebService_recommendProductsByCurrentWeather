@@ -1,10 +1,12 @@
-.container .card {
-  max-width: 600px; }
-  .container .card .card-header {
-    background-color: #c5e2f1; }
-  .container .card .card-body {
-    background-color: #eee; }
-    .container .card .card-body span {
-      font-weight: 700; }
+.container .usage {
+  margin-top: 6rem; }
+  .container .usage .card {
+    max-width: 600px; }
+    .container .usage .card .card-header {
+      background-color: #c5e2f1; }
+    .container .usage .card .card-body {
+      background-color: #eee; }
+      .container .usage .card .card-body span {
+        font-weight: 700; }
 
 /*# sourceMappingURL=app.css.map */
