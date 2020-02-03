@@ -7,7 +7,7 @@ Create a service, which returns product recommendations depending on current wea
 
 
 #### Deployed at:
-https://recommended-products-prod.herokuapp.com/api/products/recommended/palanga
+https://recommended-products.herokuapp.com/api/products/recommended/palanga
 
 #### Tech:
 * PHP, Laravel
