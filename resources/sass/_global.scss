@@ -1,15 +1,14 @@
-.card {
-  max-width:  600px;
-  .card-header {
-    background-color: #c5e2f1;
-  }
-  .card-body {
-    background-color: #eee;
-    span{
-      font-weight: 700;
+.container {
+  .card {
+    max-width:  600px;
+    .card-header {
+      background-color: #c5e2f1;
     }
-    li {
-      list-style: none;
+    .card-body {
+      background-color: #eee;
+      span{
+        font-weight: 700;
+      }
     }
   }
 }
