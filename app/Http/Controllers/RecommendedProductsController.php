@@ -18,7 +18,7 @@ class RecommendedProductsController extends Controller
         $recommendedProducts = $this->aggregateRecommendedProducts($city, $currentWeather);
 
         if (!$recommendedProducts) {
-            abort(404,'Usage: Go to /api/products/recommended/{city}');
+            abort(404,'Whoops, something went wrong');
         }
 
         return $recommendedProducts;
