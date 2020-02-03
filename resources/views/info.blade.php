@@ -18,7 +18,9 @@
                 <div class="card">
                     <div class="card-header">Api usage</div>
                     <div class="card-body">
-                        <h5>Go to:</h5>
+                        <h2>Web Service</h2>
+                        <h4>Get recommended products by current weather in a city of Lithuania</h4>
+                        <h5>Usage:</h5>
                         <ol>
                             <li>https://recommended-products.herokuapp.com/api/products/recommended/<span>:city</span>
                             </li>

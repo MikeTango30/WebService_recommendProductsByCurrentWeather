@@ -6,6 +6,8 @@
       background-color: #c5e2f1; }
     .container .usage .card .card-body {
       background-color: #eee; }
+      .container .usage .card .card-body li {
+        margin: .5rem 0; }
       .container .usage .card .card-body span {
         font-weight: 700; }
 
