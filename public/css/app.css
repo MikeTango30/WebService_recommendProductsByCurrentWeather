@@ -1,0 +1,12 @@
+.card {
+  max-width: 600px; }
+  .card .card-header {
+    background-color: #c5e2f1; }
+  .card .card-body {
+    background-color: #eee; }
+    .card .card-body span {
+      font-weight: 700; }
+    .card .card-body li {
+      list-style: none; }
+
+/*# sourceMappingURL=app.css.map */
