@@ -1,20 +1,45 @@
 .container {
-  .usage {
-    margin-top: 6rem;
-    .card {
-      max-width: 600px;
-      .card-header {
-        background-color: #c5e2f1;
-      }
-      .card-body {
-        background-color: #eee;
-          li {
-              margin: .5rem 0;
-          }
-        span {
-          font-weight: 700;
+    a {
+        color: #000;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
         }
-      }
     }
-  }
+    .info {
+        margin-top: 6rem;
+
+        .card {
+            max-width: 800px;
+
+            .card-header {
+                background-color: #c5e2f1;
+            }
+
+            .card-body {
+                padding: 1.5rem 3rem;
+                background-color: #eee;
+
+                .underline {
+                    border-bottom: 1px solid #ccc;
+                }
+
+                .usage {
+                    margin: .5rem 0;
+                }
+
+                ol {
+                    margin: 1rem 0;
+
+                    li {
+                        margin: .5rem 0;
+
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }

@@ -14,20 +14,36 @@
 <main>
     <div class="container-fluid">
         <div class="container">
-            <div class="row justify-content-center usage">
+            <div class="row justify-content-center info">
                 <div class="card">
-                    <div class="card-header">Api usage</div>
+                    <div class="card-header">
+                        <div class="row">
+                            <h2>Web Service</h2>
+                        </div>
+                    </div>
                     <div class="card-body">
-                        <h2>Web Service</h2>
-                        <h4>Get recommended products by current weather in a city of Lithuania</h4>
-                        <h5>Usage:</h5>
-                        <ol>
-                            <li>https://recommended-products.herokuapp.com/api/products/recommended/<span>:city</span>
-                            </li>
-                            <li>where <span>:city</span> enter any LT city without LT characters and with dashes instead
-                                of spaces
-                            </li>
-                        </ol>
+                        <div class="row underline">
+                            <h5>Get recommended products by current weather in a city of Lithuania</h5>
+                        </div>
+                        <div class="row">
+                            <span class="usage">How to use:</span>
+                        </div>
+                        <div class="row">
+                            <ol>
+                                <li>
+                                    https://recommended-products.herokuapp.com/api/products/recommended/<span>:city</span>
+                                </li>
+                                <li>where <span>:city</span> enter any LT city without LT characters and with dashes
+                                    instead
+                                    of spaces
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="row">
+                            <p>Data source: <a href="https://api.meteo.lt/" target="_blank">LHMT</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
