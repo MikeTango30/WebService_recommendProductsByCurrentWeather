@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <title>Recommended Products Service</title>
 </head>
 <body>
@@ -15,12 +16,13 @@
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <div class="card mt-5">
+                    <div class="card mt-6">
                         <div class="card-header">Api usage</div>
                         <div class="card-body">
+                            <h5>Go to:</h5>
                             <ul>
-                                <li>https://recommended-products.herokuapp.com/api/products/recommended/:city</li>
-                                <li>where :city enter any LT city without LT characters and with dashes instead of spaces
+                                <li>https://recommended-products.herokuapp.com/api/products/recommended/<span>:city</span></li>
+                                <li>where <span>:city</span> enter any LT city without LT characters and with dashes instead of spaces
                                 </li>
                             </ul>
                         </div>
