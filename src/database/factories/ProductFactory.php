@@ -13,6 +13,6 @@ $factory->define(Product::class, function (Faker $faker) {
         'sku' => $faker->regexify('/([A-Z]{2,3})-(\d{1,2})/'), //ie 'MUP-12'
         'name' => $faker->productName,
         'price' => $faker->randomFloat(2, 4, 50),
-        'weather_id' => intval($faker->numberBetween(0, 12)."2")
+        'weather_id' => intval($faker->numberBetween(0, 12))
     ];
 });
