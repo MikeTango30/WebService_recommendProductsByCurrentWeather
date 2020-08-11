@@ -1,14 +1,26 @@
-.container .usage {
+.container a {
+  color: #000;
+  text-decoration: none; }
+  .container a:hover {
+    text-decoration: underline; }
+.container .info {
   margin-top: 6rem; }
-  .container .usage .card {
-    max-width: 600px; }
-    .container .usage .card .card-header {
+  .container .info .card {
+    max-width: 800px; }
+    .container .info .card .card-header {
       background-color: #c5e2f1; }
-    .container .usage .card .card-body {
+    .container .info .card .card-body {
+      padding: 1.5rem 3rem;
       background-color: #eee; }
-      .container .usage .card .card-body li {
+      .container .info .card .card-body .underline {
+        border-bottom: 1px solid #ccc; }
+      .container .info .card .card-body .usage {
         margin: .5rem 0; }
-      .container .usage .card .card-body span {
-        font-weight: 700; }
+      .container .info .card .card-body ol {
+        margin: 1rem 0; }
+        .container .info .card .card-body ol li {
+          margin: .5rem 0; }
+          .container .info .card .card-body ol li span {
+            font-weight: 700; }
 
 /*# sourceMappingURL=app.css.map */
