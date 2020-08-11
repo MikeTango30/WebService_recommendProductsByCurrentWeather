@@ -4,5 +4,5 @@ namespace App\WeatherApi;
 
 interface ApiWeatherInterface
 {
-    public function getCurrentWeather($city);
+    public function getCurrentWeather(string $city);
 }
