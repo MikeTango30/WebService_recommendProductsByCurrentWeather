@@ -1,7 +1,0 @@
-{
-  "scripts": {
-    "compile": [
-      "cd src;composer install;"
-    ]
-  }
-}
