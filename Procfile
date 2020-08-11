@@ -1,0 +1,1 @@
+web: cd src && composer install
