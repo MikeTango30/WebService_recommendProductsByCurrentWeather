@@ -2,7 +2,7 @@
 
 namespace App\WeatherApi;
 
-interface ApiWeatherContract
+interface ApiWeatherInterface
 {
     public function getCurrentWeather($city);
 }
