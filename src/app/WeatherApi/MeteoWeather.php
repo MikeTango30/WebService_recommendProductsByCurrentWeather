@@ -1,10 +1,9 @@
 <?php
 
-
 namespace App\WeatherApi;
 
-
 use GuzzleHttp\Client;
+use GuzzleHttp\Exception\ClientException;
 
 class MeteoWeather implements ApiWeatherInterface
 {
@@ -13,15 +12,30 @@ class MeteoWeather implements ApiWeatherInterface
     private $apiKeyForecast = "forecastTimestamps";
     private $apiKeyCondition = "conditionCode";
 
-    public function getCurrentWeather($city)
+    /**
+     * @param string $city
+     * @return string
+     */
+    public function getCurrentWeather(string $city) : string
     {
+        $message = "Couldn't get Weather";
+        $currentWeather = null;
+
         $client = new Client();
 
-        $request = $client->get($this->uri . $city . $this->uriFixedParams);
-        $response = json_decode($request->getBody(), true);
+        try{
+            $request = $client->get($this->uri . $city . $this->uriFixedParams);
+            $response = json_decode($request->getBody(), true);
+        } catch(ClientException $e){
+            $response = [
+                "error" => $message,
+            ];
+        }
 
-        $currentWeather = $response[$this->apiKeyForecast][0][$this->apiKeyCondition];
+        if (!isset($response['error'])) {
+            $currentWeather = $response[$this->apiKeyForecast][0][$this->apiKeyCondition];
+        }
 
-        return $currentWeather;
+        return $currentWeather ?? $response['error'];
     }
 }
