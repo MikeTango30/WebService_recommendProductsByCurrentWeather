@@ -1,5 +1,7 @@
 {
   "scripts": {
-    "pre-install-cmd": "cd src;composer install;"
+    "compile": [
+      "cd src;composer install;"
+    ]
   }
 }
