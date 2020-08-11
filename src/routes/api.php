@@ -14,5 +14,5 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/products/recommended/{city}', 'RecommendedProductsController@show')->middleware(CheckCityCode::class);
+Route::get('/products/recommended/{city}', 'Api\v1\RecommendedProductsController@show')->middleware(CheckCityCode::class);
 

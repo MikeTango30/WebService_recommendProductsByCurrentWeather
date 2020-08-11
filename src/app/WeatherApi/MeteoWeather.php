@@ -6,7 +6,7 @@ namespace App\WeatherApi;
 
 use GuzzleHttp\Client;
 
-class MeteoWeather implements ApiWeatherContract
+class MeteoWeather implements ApiWeatherInterface
 {
     private $uri = 'https://api.meteo.lt/v1/places/';
     private $uriFixedParams = '/forecasts/long-term';
