@@ -13,10 +13,13 @@ https://recommended-products.herokuapp.com/api/products/recommended/palanga
 * PHP, Laravel
 * MySql
 
-#### Local setup:
-* setup laravel/homestead 
-* composer install
-* php artisan migrate
-* php artisan db:seed
+#### Local setup with Docker:
+##### in project root execute scripts/start.sh:
+* It will build, (re)creates, start containers; 
+* Copy and config .env file;
+* Generate App key
+* Run migrations and seed db
 
+##### in project root execute scripts/stop.sh: 
+* It will stop and remove containers and app network
 
